@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "createextraprocessing:shit"
+    },
+    "o": {
+      "item": "minecraft:slime_ball"
+    }
+  },
+  "pattern": [
+    "###",
+    "#o#",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "createextraprocessing:shit_block"
+  }
+}
