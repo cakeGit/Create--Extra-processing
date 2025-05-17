@@ -50,10 +50,13 @@ public class CreateExtraprocessing
 
     public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(CreateExtraprocessing.MOD_ID)
 
+
             .setTooltipModifierFactory(item ->
                     new ItemDescription.Modifier(item, FontHelper.Palette.STANDARD_CREATE)
                         .andThen(TooltipModifier.mapNull(KineticStats.create(item)))
             );
+
+
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
@@ -61,10 +64,10 @@ public class CreateExtraprocessing
     {
         CreateExtraprocessing.REGISTRATE.registerEventListeners(modEventBus);
 
+        ExtraProcessingRegistrate.register();
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
-
-
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (CreateExtraprocessing) to respond directly to events.

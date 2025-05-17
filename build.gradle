@@ -19,6 +19,10 @@ dependencies {
     implementation("com.tterrag.registrate:Registrate:${registrate_version}")
 }
 
+compileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"
+compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
+localRuntime "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}
+
 tasks.named('wrapper', Wrapper).configure {
     // Define wrapper values here so as to not have to always do so when updating gradlew.properties.
     // Switching this to Wrapper.DistributionType.ALL will download the full gradle sources that comes with
