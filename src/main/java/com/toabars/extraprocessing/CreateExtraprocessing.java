@@ -49,15 +49,18 @@ public class CreateExtraprocessing
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(CreateExtraprocessing.MOD_ID)
+
             .setTooltipModifierFactory(item ->
                     new ItemDescription.Modifier(item, FontHelper.Palette.STANDARD_CREATE)
                         .andThen(TooltipModifier.mapNull(KineticStats.create(item)))
-            );;
+            );
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public CreateExtraprocessing(IEventBus modEventBus, ModContainer modContainer)
     {
+        CreateExtraprocessing.REGISTRATE.registerEventListeners(modEventBus);
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
