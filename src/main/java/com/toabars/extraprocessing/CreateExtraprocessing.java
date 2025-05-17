@@ -5,6 +5,7 @@ import com.simibubi.create.foundation.item.ItemDescription;
 import com.simibubi.create.foundation.item.KineticStats;
 import com.simibubi.create.foundation.item.TooltipModifier;
 import net.createmod.catnip.lang.FontHelper;
+import net.minecraft.resources.ResourceKey;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -49,13 +50,11 @@ public class CreateExtraprocessing
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(CreateExtraprocessing.MOD_ID)
-
-
             .setTooltipModifierFactory(item ->
                     new ItemDescription.Modifier(item, FontHelper.Palette.STANDARD_CREATE)
                         .andThen(TooltipModifier.mapNull(KineticStats.create(item)))
-            );
-
+            )
+            .defaultCreativeTab((ResourceKey<CreativeModeTab>) null);;
 
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
@@ -63,8 +62,9 @@ public class CreateExtraprocessing
     public CreateExtraprocessing(IEventBus modEventBus, ModContainer modContainer)
     {
         CreateExtraprocessing.REGISTRATE.registerEventListeners(modEventBus);
+        CreativeTab.register(modEventBus);
 
-        ExtraProcessingRegistrate.register();
+
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -79,6 +79,8 @@ public class CreateExtraprocessing
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
+        ExtraProcessingRegistrate.register();
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
@@ -110,5 +112,8 @@ public class CreateExtraprocessing
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
         }
+
     }
+
 }
+
