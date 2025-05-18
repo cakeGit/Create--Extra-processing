@@ -1,0 +1,18 @@
+{
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "tag": "minecraft:saplings"
+    },
+    {
+      "item": "minecraft:mud"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "minecraft:moss"
+    }
+  ]
+}
