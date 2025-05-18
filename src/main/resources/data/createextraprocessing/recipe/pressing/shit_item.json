@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "createextraprocessing:shit_block"
+    }
+  ],
+  "results": [
+    {
+      "id": "createextraprocessing:shit"
+    }
+  ]
+}
