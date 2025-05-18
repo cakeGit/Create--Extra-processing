@@ -42,12 +42,15 @@ public class CreateExtraprocessing
             .defaultCreativeTab((ResourceKey<CreativeModeTab>) null);;
 
 
+
+
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public CreateExtraprocessing(IEventBus modEventBus, ModContainer modContainer)
     {
         CreateExtraprocessing.REGISTRATE.registerEventListeners(modEventBus);
         CreativeTab.register(modEventBus);
+
 
 
 
@@ -66,6 +69,7 @@ public class CreateExtraprocessing
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
         ExtraProcessingRegistrate.register(modEventBus);
+        modEventBus.addListener(ExtraProcessingData::onData);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
