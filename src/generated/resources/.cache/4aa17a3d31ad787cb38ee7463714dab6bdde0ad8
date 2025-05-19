@@ -1,8 +1,8 @@
-// 1.21.1	2025-05-18T16:04:31.5073133	Registrate Provider for createextraprocessing [Registries, Data Maps, Recipes, Advancements, Loot Tables, Tags (enchantments), Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider]
-df56d0cec4e1df0eb9acdfd01f14e24fbd3dbedd assets/createextraprocessing/blockstates/shit_block.json
-4e341e0f8ea2a3f6e80f21e6e926d821496566c2 assets/createextraprocessing/lang/en_ud.json
-1d68d3417ff94a71f0f3929831261196d9d42d09 assets/createextraprocessing/lang/en_us.json
-8bdd47889f15efe99b38b6fad7e3864517b090cf assets/createextraprocessing/models/block/shit_block.json
-e8aa258f189e494701fe1aa8b1178c26477fb715 assets/createextraprocessing/models/item/shit.json
-b2ff72984acb52515b998a74082b97e57ee42722 assets/createextraprocessing/models/item/shit_block.json
-04dca92a46d80e8bf82f636ad0bd57560b0908fe data/createextraprocessing/loot_table/blocks/shit_block.json
+// 1.21.1	2025-05-19T18:39:20.3156451	Registrate Provider for createextraprocessing [Registries, Data Maps, Recipes, Advancements, Loot Tables, Tags (enchantments), Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider]
+5898428f48674a7983db494fecb636beea7b4c87 assets/createextraprocessing/blockstates/granite_casing.json
+b4387d8e67bc3e8487d88eeb1ec8c9aa898b4195 assets/createextraprocessing/lang/en_ud.json
+a0322d4ff2646d8305b0598a6a42583cd4fa3ebc assets/createextraprocessing/lang/en_us.json
+686f60282b4780785486b9e82dc79e90a705cbfa assets/createextraprocessing/models/block/granite_casing.json
+2d868a4b49478b2bc54d1c5c8e8df2516d28fe1d assets/createextraprocessing/models/item/granite_alloy.json
+7bd315e19ebc8152ec9da30c18cff76297e5be97 assets/createextraprocessing/models/item/granite_casing.json
+b1df8348b83c97848d08a8a0180f37bfeac436ff data/createextraprocessing/loot_table/blocks/granite_casing.json
