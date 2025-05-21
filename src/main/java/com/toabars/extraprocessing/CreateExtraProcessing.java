@@ -72,7 +72,7 @@ public class CreateExtraProcessing
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
         ExtraProcessingItemsRegistrate.register(modEventBus);
-        ExtraProcessingFluidsRegistrate.register(modEventBus);
+        ExtraProcessingFluidsRegistrate.register();
         modEventBus.addListener(ExtraProcessingData::onData);
     }
 
