@@ -1,0 +1,12 @@
+{
+  "sources": [
+    {
+      "type": "single",
+      "resource": "createextraprocessing:fluid/molten_butter_still"
+    },
+    {
+      "type": "single",
+      "resource": "createextraprocessing:fluid/molten_butter_flow"
+    }
+  ]
+}
