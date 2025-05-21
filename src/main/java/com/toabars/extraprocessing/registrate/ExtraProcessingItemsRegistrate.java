@@ -13,8 +13,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
 
-import static com.toabars.extraprocessing.CreateExtraProcessing.REGISTRATE;
-
 public class ExtraProcessingItemsRegistrate {
     //public static BlockEntry<Block> SHIT_BLOCK = CreateExtraprocessing.REGISTRATE.block("shit_block", Block::new)
             //.register();
