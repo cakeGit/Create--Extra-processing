@@ -4,6 +4,7 @@ import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.item.ItemDescription;
 import com.simibubi.create.foundation.item.KineticStats;
 import com.simibubi.create.foundation.item.TooltipModifier;
+import com.toabars.extraprocessing.registrate.ExtraProcessingFluidsRegistrate;
 import com.toabars.extraprocessing.registrate.ExtraProcessingItemsRegistrate;
 import net.createmod.catnip.lang.FontHelper;
 import net.minecraft.resources.ResourceKey;
@@ -71,6 +72,7 @@ public class CreateExtraProcessing
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
         ExtraProcessingItemsRegistrate.register(modEventBus);
+        ExtraProcessingFluidsRegistrate.register(modEventBus);
         modEventBus.addListener(ExtraProcessingData::onData);
     }
 

@@ -1,12 +1,10 @@
 package com.toabars.extraprocessing.registrate;
 
 import com.simibubi.create.content.decoration.encasing.CasingBlock;
-import com.simibubi.create.content.fluids.VirtualFluid;
 import com.simibubi.create.foundation.data.BuilderTransformers;
 import com.toabars.extraprocessing.AllSpriteShifts;
 import com.toabars.extraprocessing.CreateExtraProcessing;
 import com.tterrag.registrate.util.entry.BlockEntry;
-import com.tterrag.registrate.util.entry.FluidEntry;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.material.MapColor;
@@ -30,7 +28,5 @@ public class ExtraProcessingItemsRegistrate {
             .register();
 
 
-    public static void register(IEventBus modEventBus) {
-
-    }
+    public static void register(IEventBus modEventBus) {}
 }

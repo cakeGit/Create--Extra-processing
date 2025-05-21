@@ -1,0 +1,14 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "createextraprocessing:granite_alloy"
+    }
+  ],
+  "results": [
+    {
+      "amount": 250,
+      "id": "createextraprocessing:molten_butter"
+    }
+  ]
+}
