@@ -2,6 +2,7 @@ package com.toabars.extraprocessing;
 
 import com.simibubi.create.AllBlocks;
 import com.simibubi.create.AllCreativeModeTabs;
+import com.toabars.extraprocessing.registrate.ExtraProcessingItemsRegistrate;
 import com.tterrag.registrate.util.entry.RegistryEntry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -21,7 +22,7 @@ public class CreativeTab {
             () -> CreativeModeTab.builder()
                     .title(Component.literal("Create: Extra Processing"))
                     .withTabsBefore(AllCreativeModeTabs.PALETTES_CREATIVE_TAB.getId())
-                    .icon(() -> new ItemStack(AllBlocks.CRUSHING_WHEEL.get()))
+                    .icon(() -> new ItemStack(ExtraProcessingItemsRegistrate.GRANITE_ALLOY.get()))
                     .displayItems((parameters, output) -> {
                         for (RegistryEntry<Item, Item> item : CreateExtraProcessing.REGISTRATE.getAll(Registries.ITEM)) {
                             output.accept(item.get());
