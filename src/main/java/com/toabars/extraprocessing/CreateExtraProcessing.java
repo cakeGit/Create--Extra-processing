@@ -4,6 +4,7 @@ import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.item.ItemDescription;
 import com.simibubi.create.foundation.item.KineticStats;
 import com.simibubi.create.foundation.item.TooltipModifier;
+import com.toabars.extraprocessing.registrate.ExtraProcessingItemsRegistrate;
 import net.createmod.catnip.lang.FontHelper;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -27,15 +28,15 @@ import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
-@Mod(CreateExtraprocessing.MOD_ID)
-public class CreateExtraprocessing
+@Mod(CreateExtraProcessing.MOD_ID)
+public class CreateExtraProcessing
 {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "createextraprocessing";
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(CreateExtraprocessing.MOD_ID)
+    public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(CreateExtraProcessing.MOD_ID)
             .setTooltipModifierFactory(item ->
                     new ItemDescription.Modifier(item, FontHelper.Palette.STANDARD_CREATE)
                         .andThen(TooltipModifier.mapNull(KineticStats.create(item)))
@@ -47,9 +48,9 @@ public class CreateExtraprocessing
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
-    public CreateExtraprocessing(IEventBus modEventBus, ModContainer modContainer)
+    public CreateExtraProcessing(IEventBus modEventBus, ModContainer modContainer)
     {
-        CreateExtraprocessing.REGISTRATE.registerEventListeners(modEventBus);
+        CreateExtraProcessing.REGISTRATE.registerEventListeners(modEventBus);
         CreativeTab.register(modEventBus);
 
 
@@ -69,7 +70,7 @@ public class CreateExtraprocessing
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
-        ExtraProcessingRegistrate.register(modEventBus);
+        ExtraProcessingItemsRegistrate.register(modEventBus);
         modEventBus.addListener(ExtraProcessingData::onData);
     }
 

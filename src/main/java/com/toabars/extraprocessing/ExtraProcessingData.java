@@ -9,7 +9,7 @@ import net.neoforged.neoforge.data.event.GatherDataEvent;
 
 import java.util.concurrent.CompletableFuture;
 
-import static com.toabars.extraprocessing.CreateExtraprocessing.REGISTRATE;
+import static com.toabars.extraprocessing.CreateExtraProcessing.REGISTRATE;
 
 public class ExtraProcessingData {
     public static void onData(GatherDataEvent event) {
@@ -20,7 +20,7 @@ public class ExtraProcessingData {
 
         event.getGenerator().addProvider(true,
                 REGISTRATE.setDataProvider(
-                        new RegistrateDataProvider(REGISTRATE, CreateExtraprocessing.MOD_ID, event)
+                        new RegistrateDataProvider(REGISTRATE, CreateExtraProcessing.MOD_ID, event)
                 )
         );
     }

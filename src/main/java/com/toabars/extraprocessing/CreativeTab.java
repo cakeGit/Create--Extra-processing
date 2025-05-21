@@ -15,7 +15,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class CreativeTab {
 
     private static final DeferredRegister<CreativeModeTab> REGISTER =
-            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CreateExtraprocessing.MOD_ID);
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CreateExtraProcessing.MOD_ID);
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> BASE_CREATIVE_TAB = REGISTER.register("based",
             () -> CreativeModeTab.builder()
@@ -23,7 +23,7 @@ public class CreativeTab {
                     .withTabsBefore(AllCreativeModeTabs.PALETTES_CREATIVE_TAB.getId())
                     .icon(() -> new ItemStack(AllBlocks.CRUSHING_WHEEL.get()))
                     .displayItems((parameters, output) -> {
-                        for (RegistryEntry<Item, Item> item : CreateExtraprocessing.REGISTRATE.getAll(Registries.ITEM)) {
+                        for (RegistryEntry<Item, Item> item : CreateExtraProcessing.REGISTRATE.getAll(Registries.ITEM)) {
                             output.accept(item.get());
                         }
                     }).build());

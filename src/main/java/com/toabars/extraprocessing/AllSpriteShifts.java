@@ -124,7 +124,7 @@ public class AllSpriteShifts {
 	private static Couple<CTSpriteShiftEntry> vault(String name) {
 		final String prefixed = "block/vault/vault_" + name;
 		return Couple.createWithContext(
-			medium -> CTSpriteShifter.getCT(AllCTTypes.RECTANGLE, CreateExtraprocessing.asResource(prefixed + "_small"),
+			medium -> CTSpriteShifter.getCT(AllCTTypes.RECTANGLE, CreateExtraProcessing.asResource(prefixed + "_small"),
 				Create.asResource(medium ? prefixed + "_medium" : prefixed + "_large")));
 	}
 
@@ -145,12 +145,12 @@ public class AllSpriteShifts {
 	//
 
 	private static SpriteShiftEntry get(String originalLocation, String targetLocation) {
-		return SpriteShifter.get(CreateExtraprocessing.asResource(originalLocation), CreateExtraprocessing.asResource(targetLocation));
+		return SpriteShifter.get(CreateExtraProcessing.asResource(originalLocation), CreateExtraProcessing.asResource(targetLocation));
 	}
 
 	private static CTSpriteShiftEntry getCT(CTType type, String blockTextureName, String connectedTextureName) {
-		return CTSpriteShifter.getCT(type, CreateExtraprocessing.asResource("block/" + blockTextureName), // CHANGE HERE
-			CreateExtraprocessing.asResource("block/" + connectedTextureName + "_connected"));
+		return CTSpriteShifter.getCT(type, CreateExtraProcessing.asResource("block/" + blockTextureName), // CHANGE HERE
+			CreateExtraProcessing.asResource("block/" + connectedTextureName + "_connected"));
 	}
 
 	private static CTSpriteShiftEntry getCT(CTType type, String blockTextureName) {
