@@ -1,5 +1,6 @@
 {
   "values": [
-    "createextraprocessing:granite_casing"
+    "createextraprocessing:granite_casing",
+    "createextraprocessing:granite_mechanical_mixer"
   ]
 }

@@ -4,6 +4,7 @@ import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.item.ItemDescription;
 import com.simibubi.create.foundation.item.KineticStats;
 import com.simibubi.create.foundation.item.TooltipModifier;
+import com.toabars.extraprocessing.registrate.ExtraProcessingBlockEntity;
 import com.toabars.extraprocessing.registrate.ExtraProcessingFluidsRegistrate;
 import com.toabars.extraprocessing.registrate.ExtraProcessingItemsRegistrate;
 import net.createmod.catnip.lang.FontHelper;
@@ -44,9 +45,6 @@ public class CreateExtraProcessing
             )
             .defaultCreativeTab((ResourceKey<CreativeModeTab>) null);;
 
-
-
-
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public CreateExtraProcessing(IEventBus modEventBus, ModContainer modContainer)
@@ -54,8 +52,7 @@ public class CreateExtraProcessing
         CreateExtraProcessing.REGISTRATE.registerEventListeners(modEventBus);
         CreativeTab.register(modEventBus);
 
-
-
+        ExtraProcessingBlockEntity.register();
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
